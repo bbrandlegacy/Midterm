@@ -1,0 +1,23 @@
+A) this is a sql injection problem where the paramaters fromt he user are passed directly to the data base without any
+checking or security measures taken.
+
+B)
+if an astronaut entered ' OR '1'='1 then the string interpreted by the SQL would be OR 1=1 which means the query'd be:
+SELECT * FROM secret_missions WHERE access_code = OR 1=1
+the effect would be returning any data that fit those parameters.
+
+
+
+C)
+Rewrite the code:
+I would make it so that the code is only numbers so that nobody can send any letters in the query.
+try{
+    String secretcode = Integer.parseInt(request.getParameter("access_code"));
+    String query = "SELECT * FROM secret_missions WHERE access_code = '"+ secretcode +"'";
+    } catch(NumberFormatException e){
+    System.Out.Println("NumberFormatException, there are letters here, nice try");
+    }
+
+this way there is no capability for letters to be turned into words. now if we want to have letters or must have them
+what i would do is simply turn all letters into the ascii values so that no letters are ever passed to the SQL Query.
+This way even if they do pass letters, they are never read as characters, only numbers.

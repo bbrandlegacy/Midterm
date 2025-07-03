@@ -1,0 +1,28 @@
+1) primary key is unique for astronaut_ID and unique for Mission_name but are in the same table with all other data
+ and things can be identifiable but there is redundant data that is dependent on each other. we have a composite key
+.mission name may be unique here ut it will not always be, so everything having to do with the mission should be a
+separate table, and who is associated should be in a separate table.
+
+2) we ned two tables to make it into 3NF
+    first table would be astronauts with columns: astronaut_id, astronaut_name
+    second table would be mission_launch with columns: mission_name, launch_site, site_code, site_country
+    third table would be missions with columns: mission_id,astronaut,mission
+
+3)
+CREATE TABLE missions (
+    mission_id int auto_increment primary_key
+    astronaut varchar(30) not null
+    mission varchar(30) not null
+)
+
+CREATE TABLE astronauts(
+    astronaut_id int autoincrement primary_key
+    astronaut_name varchar(30) not null
+)
+
+CREATE TABLE mission_launch(
+    mission_name varchar(30) primary_key
+    launch_site varchar(30) not null
+    site_code varchar(3)
+    site_country varchar(30)
+)
