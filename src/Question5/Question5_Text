@@ -1,0 +1,32 @@
+Stories:
+Submission Structure:
+    User--->Type
+        Stories
+        Use case
+
+    User--->Guest
+        this user should have the ability to access the list or chosen representation of all available room types
+        then they should be able to select and make a booking which once finalized in a checkout screen should have
+        the ability to cancel active reservations and simply view all reservations active and passive.
+
+        To access the list they would go to the website select reserve a booking now, then they will be presented with
+         a list of available room types to be able to select from. This leads to next use case: booking the room
+
+    User--->Receptionist
+        this user should be able to do everything that the user can do to add and remove
+        however we need to add the ability to modify. This should include more information about the room for internal
+        functioning (room numbers and other information for either phone support or in person support/functioning.
+        This user will have a interaction with a list of all guests first to then enter a similar view as the guest
+        with further options to modify and view the reservation.
+
+        either online or in person a guest will interact IRL to check in or edit a reservation to which the
+        receptionists will utilize the above stories in succession relative to the needs of the guest.
+
+    User--->Managers
+        managers care not about managing guests but about the employees. they should be able to control who the
+        receptionists are and the ability to see the overall functioning of the hotel. they should be able to see the
+        occupancy reports and generate revenue reports. a summation of all guests present, past, future, and create a
+        revenue report for certain time periods.
+
+        all this will be done through a flow of options. they will have access to all that the receptionist can do and
+        has the ability to manage the receptionist itself.
