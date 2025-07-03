@@ -1,6 +1,6 @@
 package Question4;
 
-public class ExpressShipment implements Shipment {
+public non-sealed class ExpressShipment implements Shipment {
     private final String trackingNumber;
     private final String priorityLevel;
 

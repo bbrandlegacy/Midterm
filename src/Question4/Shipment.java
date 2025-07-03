@@ -1,5 +1,5 @@
 package Question4;
 
-public interface Shipment {
+public sealed interface Shipment permits ExpressShipment,OvernightShipment,StandardShipment{
     String getTrackingDetails();
 }

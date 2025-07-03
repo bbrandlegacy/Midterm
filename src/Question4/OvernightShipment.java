@@ -1,6 +1,6 @@
 package Question4;
 
-public class OvernightShipment  implements Shipment {
+public non-sealed class OvernightShipment  implements Shipment {
     private final String trackingNumber;
     private final String deliveryTime;
 
