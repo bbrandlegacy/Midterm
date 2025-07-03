@@ -1,0 +1,5 @@
+1)
+SELECT * FROM astronauts WHERE astronaut_name ' N%'
+
+2)
+SELECT * FROM astronauts WHERE astronaut_name '% %'
