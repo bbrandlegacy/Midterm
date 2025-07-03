@@ -1,0 +1,14 @@
+This structure is mimicking a stack, first in last out
+the problem here is that as it would have plenty of logic to go against what is being sought after as a
+functionality limitation. Extending ArrayList would let you do more than you would would want and would also not
+ maintain the structure of a stack due to pointer issues.
+
+first there may not be a book at index 0 (if the bookshelf is full) also if it is full assuming we start adding books
+at index 0 once there are books then there would be empty space and the bookshelf would not be modelled correctly
+when there is supposed to be a book as there is in real life it is missing. which means the next time you add a
+book it will be off by one space and that will continue to create more and more issues.
+
+first off i would simply implement the Stack class as java already fixed all these things. then if we need anything
+ specific to happen special to books we can override some implementations. if im not allowed to give this as an answer
+  i would model the stack class. if i still cant say that, then i would simply override the arraylist functions that
+  cause issues with logic necessary to represent that limitations imposed by the design of the bookshelf.
