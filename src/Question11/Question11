@@ -1,5 +1,11 @@
 1)
 SELECT * FROM mission_crew
 GROUP BY mission_name
-HAVING COUNT(astronaut_name)>2
+HAVING COUNT(astronaut_name) > 2
 ORDER BY COUNT(astronaut_name) DESC;
+
+2)
+SELECT * FROM mission_crew
+GROUP BY country
+HAVING COUNT(mission_name) > 3
+ORDER BY COUNT(mission_name) DESC;
